@@ -1,19 +1,20 @@
 <template>
     <li>
-        <div>
+        <base-card>
             <header>
                 <h3> {{ title }} </h3>
-                <button>Supprimer</button>
+                <base-button mode="flat" >Supprimer</base-button>
             </header>
-        </div>
-        <p> {{ description }} </p>
-        <nav>
-            <a target="_blank" :href="link">Voir la ressource</a>
-        </nav>
+            <p> {{ description }} </p>
+            <nav>
+              <a target="_blank" :href="link">Voir la ressource</a>
+            </nav>
+        </base-card>
     </li>
 </template>
 
 <script>
+
 export default {
     props : [
         'title',
@@ -23,7 +24,12 @@ export default {
 }
 </script>
 
-<style scoped>
+
+<style lang="less" scoped>
+@link-color : #42b983;
+@link-hover : teal;
+@margin-top : 0.5rem 0;
+
 li {
   margin: auto;
   max-width: 40rem;
@@ -37,21 +43,21 @@ header {
 
 h3 {
   font-size: 1.25rem;
-  margin: 0.5rem 0;
+  margin: @margin-top;
 }
 
 p {
-  margin: 0.5rem 0;
+  margin: @margin-top;
 }
 
 a {
   text-decoration: none;
-  color: #42b983;
+  color: @link-color;
   font-weight: bolder;
+  &:hover {
+    color: @link-hover;
+  }
 }
 
-a:hover,
-a:active {
-  color: teal;
-}
+
 </style>

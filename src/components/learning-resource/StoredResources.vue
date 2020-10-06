@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 ul {
   list-style: none;
   margin: 0;

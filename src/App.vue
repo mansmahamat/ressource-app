@@ -1,13 +1,14 @@
 <template>
-    <StoredResources :resources="storedResources"/>
+    <TheHeader title="Ressources"/>
 </template>
 
 <script>
-import StoredResources from './components/learning-resource/StoredResources'
+import TheHeader from './components/layouts/TheHeader';
 
 export default {
+    
     components : {
-        StoredResources
+        TheHeader
     },
     data() {
         return {
@@ -15,8 +16,8 @@ export default {
                 {
                     id : 'documentation',
                     title: 'Documentation',
-                    description : 'La documentation officielle de Vue.js',
-                    link : 'https://vuejs.org/'
+                    description : 'La documentation officielle de Vue.js 3',
+                    link : 'https://v3.vuejs.org/'
                 },
                 {
                     id : 'google',
